@@ -1,8 +1,6 @@
 baseURL = "https://gaozl9515.github.io/qingshui/"
 languageCode = 'en-us'
 title = 'My New Hugo Site'
-contentDir = 'content'
-enableEmoji = true
 
 [module]
     [[module.imports]]
@@ -12,5 +10,11 @@ enableEmoji = true
         path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
         disable = false
 
-[params]
-  contentDir = "content/docs"
+[markup.goldmark.renderer]
+    unsafe = true
+
+[[menu.primary]]
+    name  = "Docs"
+    url = "/docs/"
+    identifier = "docs"
+    weight = 10
